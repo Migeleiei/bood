@@ -1,0 +1,96 @@
+USE bood;
+
+CREATE TABLE category (
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
+    category_name VARCHAR(255) NOT NULL,
+    category_image VARCHAR(255) NOT NULL
+);
+
+INSERT INTO category (category_id, category_name,category_image)
+VALUES
+    (1, 'FreeToPlay','https://images5.alphacoders.com/132/1325222.png'),
+    (2, 'Demos','https://blog.playstation.com/tachyon/2024/02/23867b0f7cf14055888193bb13a66c7623cca22f.jpg?resize=1088%2C612&crop_strategy=smart'),
+    (3, 'EarlyAccess','https://images6.alphacoders.com/134/1348515.png');
+
+CREATE TABLE product (
+    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    category_id INT,
+    product_name VARCHAR(255) NOT NULL,
+    product_description TEXT,
+    product_images_header VARCHAR(255),
+    product_images_portrait VARCHAR(255),
+    product_price_promotion DECIMAL(10,2),
+    product_sale_count INT,
+    FOREIGN KEY (category_id) REFERENCES category(category_id)
+);
+
+INSERT INTO product (category_id, product_name, product_description, product_images_header, product_images_portrait, product_price_promotion, product_sale_count)
+VALUES
+    (1, 'Guild Wars 2', 'MMORPG, Adventure, RPG, Character Customization', 'https://wallpapers.com/images/hd/guild-wars-2-grey-abstract-q5zifyzrh919j8d0.jpg', 'https://www.mordeo.org/files/uploads/2022/05/Guild-Wars-2-End-Of-Dragons-Game-Poster-4K-Ultra-HD-Mobile-Wallpaper-950x1689.jpg', NULL, 0),
+    (1, 'The Sims 4', 'Life Sim, Character Customization, Building', 'https://images5.alphacoders.com/132/1325222.png', 'https://mfiles.alphacoders.com/571/571307.jpg', NULL, 129),
+    (1, 'Warframe', 'Free to Play, Action RPG, Looter Shooter, Third-Person Shooter, Action, RPG', 'https://wallpapersmug.com/download/3840x2160/5a6701/warframe-video-game-2021.jpeg', 'https://wallpapercave.com/wp/wp5968300.jpg', NULL, 97),
+    (1, 'Call of Duty: Warzone', 'Free to Play, Multiplayer, FPS, Battle Royale, Action, Shooter', 'https://images.alphacoders.com/113/1136137.jpg', 'https://w0.peakpx.com/wallpaper/889/376/HD-wallpaper-call-of-duty-warzone-ghost-r-modernwarfare-thumbnail.jpg', NULL, 100),
+    (1, 'PUBG: BATTLEGROUNDS', 'Survival, Shooter, Battle Royale, Multiplayer, FPS, PvP, Third-Person Shooter, Action', 'https://wallpapers.com/images/featured/pubg-4k-m7d01u319yw5wo0m.jpg', 'https://r1.ilikewallpaper.net/iphone-12-pro-max-wallpapers/download-109083/40-PUBG-Mobile-4k-on-afari.jpg', NULL, 121),
+    (1, 'LoveBeat', 'Free to Play, Rhythm, Massively Multiplayer, Casual, Music, Anime', 'https://cdn.akamai.steamstatic.com/steam/apps/354290/capsule_616x353.jpg?t=1710460628', 'https://thumbnails.pcgamingwiki.com/9/9a/LoveBeat_cover.jpg/300px-LoveBeat_cover.jpg', NULL, 49),
+    (1, 'Team Fortress 2', 'Free to Play, Hero Shooter, Multiplayer, FPS, Shooter, Action, Class-Based', 'https://images4.alphacoders.com/355/35544.jpg', 'https://w0.peakpx.com/wallpaper/485/458/HD-wallpaper-team-fortress-2-tf2-valve.jpg', NULL, 67),
+    (1, 'eFootball 2024', 'Football(Soccer), Free to Play, Sports, Multiplayer, Controller, eSports, Simulation, PvP', 'https://wallpapercave.com/wp/wp13111907.jpg', 'https://cdn2.steamgriddb.com/grid/51312c34d3a526ac2344e5cdc70d5929.jpg', NULL, 56),
+    (1, 'Destiny 2', 'Free to Play, Open World, FPS, Looter Shooter, MMORPG, Co-op, Multiplayer, PvE', 'https://gameranx.com/wp-content/uploads/2017/03/Destiny-4K-Wallpaper.jpg', 'https://w0.peakpx.com/wallpaper/433/104/HD-wallpaper-destiny-cayde-destiny-2-gaming-guardian-manpie-shaxx-zavala.jpg', NULL, 69),
+    (1, 'War Thunder', 'Free to Play, Vehicular Combat, Combat, World War II, VR, Flight, War, Military, Tanks', 'https://www.gamepur.com/wp-content/uploads/2020/10/18221405/War-Thunder.jpg', 'https://c4.wallpaperflare.com/wallpaper/525/895/755/war-thunder-airplane-tiger-i-gaijin-entertainment-wallpaper-preview.jpg', NULL, 33),
+    (1, 'THE FINALS', 'Multiplayer, Shooter, FPS, Free to Play, Destruction, PvP, First-Person, Team-Based', 'https://images8.alphacoders.com/134/1344122.jpeg', 'https://images.hdqwalls.com/download/the-finals-21-2160x3840.jpg', NULL, 73),
+    (1, 'Counter-Strike 2', 'FPS, Shooter, Multiplayer, Competitive, Action, Team-Based, eSports', 'https://images.shopcdn.co.uk/51/81/5181553c3a4d05300b8b88219fb5b5bd/1918x1052/webp/resize', 'https://image-1.uhdpaper.com/wallpaper/counter-strike-2-phone-wallpaper-4k-uhdpaper.com-223@1@k.jpg', NULL, 133),
+    (2, 'Granblue Fantasy Versus: Rising Free Edition', 'Action, 2D Fighter, Anime, Fighting, eSports, Single player', 'https://images6.alphacoders.com/134/thumb-1920-1341492.jpg', 'https://picfiles.alphacoders.com/641/thumb-350-641248.webp', NULL, 26),
+    (2, 'Feed The Cups Demo', 'Cute, Simulation, Crafting, 2D, Online Co-op', 'https://cdn.akamai.steamstatic.com/steam/apps/2336220/capsule_616x353.jpg?t=1709711889', 'https://cdn-products.eneba.com/resized-products/L_-d1A7aIs4Y8s3PZV05sX7Z2G67Q4Bd1xpN8Mx_c7k_350x200_2x-0.jpg', NULL, 29),
+    (2, 'FINAL FANTASY XIV Online Free Trial', 'RPG, Massively Multiplayer, MMORPG, Fantasy, Open World, Adventure', 'https://image.api.playstation.com/vulcan/ap/rnd/202309/2513/c33e837ec8ee83cc98bf7d69a9ee1393a2a610bc2da16984.jpg', 'https://image.api.playstation.com/vulcan/ap/rnd/202310/0211/0ab0ecb99bd323022f4a0a23e1a6a1928b107066cd49bc3c.jpg', NULL, 97),
+    (2, 'DELTARUNE Demo', 'Story Rich, Pixel Graphics, Great Soundtrack, Funny, RPG, Bullet Hell, Singleplayer, Emotional', 'https://212b5c62.flyingcdn.com/storage/files/deltarune-chapter-1-temporarily-removed-in-north-america.png', 'https://cdn2.steamgriddb.com/grid/4b3043925d2fa9efac3dfa5c93f302fe.png', NULL, 25),
+    (2, 'Demonsomania Demo', 'Horror, Online Co-Op, Multiplayer, Psychological Horror, Co-Op, Exploration, Supernatural, Sci-fi', 'https://cdn.akamai.steamstatic.com/steam/apps/2506820/capsule_616x353.jpg?t=1708126090', 'https://static-cdn.jtvnw.net/ttv-boxart/1911378858_IGDB-272x380.jpg', NULL, 23),
+    (2, 'Internet Cafe Evolution Demo', 'Simulation, Management, Strategy, Building, Indie, Dating Sim, Economy, Sandbox', 'https://cdn.akamai.steamstatic.com/steam/apps/2600600/header.jpg?t=1710303096', 'https://itorrents-igruha.net/uploads/posts/2023-10/1697435560_library_600x900_2x.jpg', NULL, 16),
+    (2, 'Sky: Children of the Light Demo', 'MMORPG, Puzzle, Indie, Cozy, Adventure, Relaxing, Massively Multiplayer, Exploration, Emotional', 'https://i.ytimg.com/vi/g3r1KbzSiT8/maxresdefault.jpg', 'https://m.media-amazon.com/images/M/MV5BMTg4MDM4YjMtZTVmOS00ZDMxLWJlZDMtMDI5ZTM2ZTY3OWUxXkEyXkFqcGdeQXVyMjQ4Mzc4ODQ@._V1_.jpg', NULL, 37),
+    (2, 'Soundpad Demo', 'Utilities, Audio Production', 'https://cdn.akamai.steamstatic.com/steam/apps/629520/capsule_616x353.jpg?t=1670602154', 'https://steamuserimages-a.akamaihd.net/ugc/1649965041002292013/C9F2DBAF5000D1D391A110B374EFFBDA4B6C9099/?imw=512&imh=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true', NULL, 36),
+    (2, 'Epic Auto Towers Demo', 'Strategy, Auto Battler, Combat, Cute, Roguelike Deckbuilder, Card Battler', 'https://cdn.akamai.steamstatic.com/steam/apps/2116060/capsule_616x353.jpg?t=1706962374', 'https://img.tapimg.net/market/images/FvcPg0D9smSZ7FsgfK83LNVpIIv7.png?imageView2/0/h/270/format/jpg/interlace/1/ignore-error/1', NULL, 49),
+    (2, 'Dread Dawn Demo', 'Gore, Violent', 'https://cdn.cloudflare.steamstatic.com/steam/apps/2729930/capsule_616x353.jpg?t=1702032992', 'https://static-cdn.jtvnw.net/ttv-boxart/1519624886_IGDB-272x380.jpg', NULL, 39),
+    (2, 'Euro Truck Simulator 2 Demo', 'Simulation', 'https://cdn.cloudflare.steamstatic.com/steam/apps/231120/capsule_616x353.jpg?t=1578930036', 'https://cdn.xzone.cz/p/simulace/euro-truck-simulator-2-game-of-the-year-edition/euro-truck-simulator-2-game-of-the-year-edition-375w.png', NULL, 12),
+    (2, 'Backpack Battles Demo', 'Strategy Auto Battler, Inventory Management, PvP, Roguelike Deckbuilder', 'https://cdn.akamai.steamstatic.com/steam/apps/2427700/capsule_616x353.jpg?t=1710323304', 'https://pizzatower.io/wp-content/uploads/2023/10/Screenshot_20-2.png', NULL, 39),
+    (3, 'Valheim', 'Open World Survival Craft, Survival, Online Co-Op, Open World, Multiplayer, Building, Crafting, Exploration', 'https://cdn.akamai.steamstatic.com/steam/apps/892970/capsule_616x353.jpg?t=1708348390', 'https://cdn.cdkeys.com/700x700/media/catalog/product/v/a/valheim_pc.jpg', 289.00, 89),
+    (3, 'Lethal Company', 'Online Co-Op, Horror, First-Person, Co-Op, Psychological Horror, Survival Horror', 'https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F72adf43a-b8c1-4fff-8bc7-a625c2cb79d6_1920x1080.jpeg', 'https://www.digiseller.ru/preview/1159210/p1_4093186_3181b6fa.jpg', 220.00, 269),
+    (3, 'Zero Hour', 'Tactical, Shooter, FPS, Realistic, Multiplayer, Action, First-Person', 'https://cdn.akamai.steamstatic.com/steam/apps/1359090/capsule_616x353.jpg?t=1708876784', 'https://thumbnails.pcgamingwiki.com/9/94/ZeroHour.jpg/300px-ZeroHour.jpg', 125.40, 76),
+    (3, 'Fabledom', 'City Builder, Relaxing, Sandbox, Colony Sim, Economy', 'https://clan.akamai.steamstatic.com/images/43475873/9fe475683b19d227257c0aff9042b2bc2f5d1252.png', 'https://www.gematsu.com/wp-content/uploads/2023/01/Game-Page-Box-Art_Fabledom-Inits-320x480.jpg', 298.15, 37),
+    (3, '7 Days to Die', 'Survival, Zombies, Multiplayer, Open World, Open World Survival Craft, Voxel, Base Building', 'https://gaming-cdn.com/images/products/1028/616x353/7-days-to-die-pc-mac-game-steam-cover.jpg?v=1704800260', 'https://m.media-amazon.com/images/I/616B7PFRICL._AC_UF1000,1000_QL80_.jpg', 319.00, 91),
+    (3, 'BeamNG.drive', 'Simulation, Driving, Realistic, Physics, Destruction, Automobile Sim, Open World', 'https://cdn.akamai.steamstatic.com/steam/apps/284160/capsule_616x353.jpg?t=1709017559', 'https://upload.wikimedia.org/wikipedia/en/6/6c/BeamNGdrive_cover.png', 319.00, 18),
+    (3, 'Enshrouded', 'Open World, Survival, Base Building, Multiplayer, Online Co-Op, Crafting', 'https://cdn.akamai.steamstatic.com/steam/apps/1203620/capsule_616x353.jpg?t=1709115015', 'https://gocdkeys.com/images/games/enshrouded-pc-cd-key.jpg', 539.00, 52),
+    (3, 'HumanitZ', 'Survival, Zombies Open World, Multiplayer, Crafting, Base Building', 'https://cdn.akamai.steamstatic.com/steam/apps/1766060/capsule_616x353.jpg?t=1708970381', 'https://cdn1.epicgames.com/spt-assets/12e086656a814373b9e257aa1bd80977/download-humanitz-offer-qff3r.png', 280.00, 77),
+    (3, 'ULTRAKILL', 'Boomer Shooter, Character Action Game, Fast-Paced, Blood', 'https://cdn.akamai.steamstatic.com/steam/apps/1229490/capsule_616x353.jpg?t=1704406135', 'https://e.snmc.io/lk/l/x/0858092010ec156b9011684bba19ca9b/11275656', 346.50, 56),
+    (3, 'Deep Rock Galactic: Survivor', 'Dwarf, Action Roguelike, Top-Down Shooter, Bullet Hell', 'https://cdn.akamai.steamstatic.com/steam/apps/2321470/capsule_616x353.jpg?t=1709623037', 'https://i.playground.ru/e/Fv8MDERPcuCtV9IFrY_swA.jpeg?480x665', 220.00, 101),
+    (3, 'Palworld', 'Multiplayer, Open World, Creature Collector, Survival, Open World Survival Craft', 'https://cdn.akamai.steamstatic.com/steam/apps/1623730/capsule_616x353.jpg?t=1707904340', 'https://upload.wikimedia.org/wikipedia/en/f/fb/Palworld_Steam_artwork.jpg', 590.00, 99),
+    (3, 'Project Zomboid', 'Survival, Zombies, Open World Multiplayer', 'https://cdn.akamai.steamstatic.com/steam/apps/108600/capsule_616x353.jpg?t=1691508011', 'https://upload.wikimedia.org/wikipedia/en/0/0c/Boxshot_of_video_game_Project_zomboid.jpg', 400.00, 109);
+
+
+CREATE TABLE IF NOT EXISTS users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL, -- Storing hashed passwords for security
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(username)
+);
+
+CREATE TABLE IF NOT EXISTS sessions (
+    session_id VARCHAR(100) PRIMARY KEY,
+    user_id INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+INSERT INTO users (username, password) VALUES 
+('admin@example.com', 'bood'),
+('migeleiei@example.com', 'kkdontbengo');
+
+INSERT INTO sessions (session_id, user_id) VALUES 
+('session123', 1);
+
+CREATE TABLE IF NOT EXISTS sales (
+    bill_id INT AUTO_INCREMENT PRIMARY KEY,
+    bill_date DATE,
+    product_id INT,
+    number_of_items INT,
+    bill_price DECIMAL(10, 2),
+    FOREIGN KEY (product_id) REFERENCES product(product_id)
+);

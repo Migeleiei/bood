@@ -1,0 +1,366 @@
+body {
+    background-color: #31304D;
+    justify-content: center;
+}
+
+
+/* navbar */
+
+.navcolor {
+    background-color: #161A30;
+}
+
+.navbar-nav a {
+    color: #F0ECE5;
+}
+
+.navbar-nav a:hover {
+    color: #5999CC;
+}
+
+.login-fluid{
+    background-color: #F0ECE5 ;
+    color:  #31304D;
+    margin-left: 20px;
+}
+
+.navbar-container img:first-child{
+    margin-left: 10%;
+}
+
+.navbar-fluid {
+    background-color: #EFF0F1;
+    color: #161A30;
+}
+
+.cart-button {
+    max-width: 60px;
+    max-height: 70px;
+    border: none;
+    float: right;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-button img {
+    max-width: 30px; /* Adjust the size of the image as needed */
+    max-height: 30px;
+    margin-right: 5px; /* Adjust spacing between image and text */
+    vertical-align: middle;
+}
+
+/* navbar */
+
+
+
+/* category pages*/
+.cate-container{
+    background-color: rgba(217, 217, 217, 0.25);
+    height:400px;
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.cate-container:nth-child(2){
+    background-color: rgba(217, 217, 217, 0.25);
+    height:400px;
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 115px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+}
+.cate-container:nth-child(1){
+    background-color: rgba(217, 217, 217, 0.25);
+    height:400px;
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 115px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+}
+
+.cate-container img{
+    max-width: 400px;
+    max-height: 400px;
+    align-items: center;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+.cate-container button{
+    background-color: rgba(22, 26, 48, 0.8);
+    width: 300px;
+    border-radius: 20px;
+    border: solid 3px white;
+}
+#cate-h{
+    color: white;
+    margin-top: 30px;
+    margin-left: 115px;
+}
+/* category pages*/
+
+
+
+/* news pages*/
+.news-container-2{
+    background-color: rgba(217, 217, 217, 0.25);
+    height:500px;
+    width: 700px;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 220px;
+    display: flex;
+    gap: 20px ;
+    border-radius: 20px;
+    text-align: left;
+    align-items: center;
+    flex-direction: column;
+}
+
+.news-container h3,
+.news-container p{
+    text-align: left;
+    margin: 0;
+}
+
+
+.news-container-2:nth-child(2){
+    margin-left: 50px;
+}
+.news-container-2 img{
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 20px;
+}
+.other-news{
+    background-color: rgba(217, 217, 217, 0.25);
+    width: 1452px;
+    height:200px;
+    margin-bottom: 20px;
+    margin-left: 207px;
+    border-radius: 20px;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.other-news img{
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 20px;
+}
+/* news pages*/
+
+
+
+
+/* home pages */
+.container{
+    justify-content: center;
+}
+
+.container-1{
+    padding-top: 10px;
+}
+
+.container-2 {
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+  
+}
+.container-2-fluid{
+    background-color: rgba(217, 217, 217, 0.25);
+    height: 400px;
+    padding-top: 50px;
+    padding-left: 10px;
+    border-radius: 20px;
+}
+
+.container-2-fluid img{
+    width: 300px;
+    margin: 20px;
+    border-radius: 20px;
+}
+.container-2-fluid h4{
+    font-weight: 500;
+    padding-left: 20px;
+
+}
+.container-2-fluid h1:first-child{
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.element {
+    background-color: rgba(217, 217, 217, 0.25);
+    
+    margin-top: 50px  ;
+    border-radius: 20px;
+}
+
+.elememnt-picture {
+    height: 100px;
+    border-radius: 20px;
+}
+
+/* home pages */
+
+
+
+
+.login-container {
+    
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #494877;
+    color: #F0ECE5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+button {
+    background-color: #31304D;
+    color: #F0ECE5;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.forgot-password {
+    text-align: right;
+    margin-top: 10px;
+}
+.forgot-password a {
+    color: #F0ECE5;
+    text-decoration: none;
+}
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+#carousel-radius{
+    border-radius: 20px;
+}
+
+.Game-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(91, 90, 112);
+    margin: 20px;
+    margin-bottom: 30px;
+}
+
+.GMPIC {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text {
+    margin-right: 50px;
+}
+
+.PPAP {
+    border-radius: 10px;
+    background-color: rgb(91, 90, 112);
+}
+.RCContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-btn {
+    width: 100px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+.imageRM {
+    max-width: 80%;
+    height: auto;
+}
+.RCElement {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.PPAP2 {
+    border-radius: 10px;
+    background-color: rgb(30, 32, 57);
+    margin-bottom: 20px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.text-list {
+    color: #EFF0F1;
+}
+.manage-container {
+    max-width: 1000px;
+    background-color: #494877;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.size-searchBar {
+    width: 300px;
+    margin-left: 680px;
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 600px) {
+    .navbar img {
+        width: 45px;
+        height: 40px;
+    }
+    .login-container{
+        width: 80%;
+    }
+}
+
+/* Desktop and Tablet Screens */
+@media screen and (min-width: 601px) {
+    .navbar img {
+        width: 90px;
+        height: 75px;
+    }
+
+    .carousel-inner{
+    
+    }
+}
+
+
+

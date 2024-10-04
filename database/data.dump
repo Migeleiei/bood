@@ -1,0 +1,95 @@
+
+CREATE TABLE category (
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
+    category_name VARCHAR(255) NOT NULL,
+    category_image VARCHAR(255) NOT NULL
+);
+
+INSERT INTO category (category_name,category_image)
+VALUES
+    ('FreeToPlay','resource/freetoplay/the-sims-4/header.jpeg'),
+    ('Demos','resource/demos/final-fantasy/header.jpg'),
+    ('EarlyAccess','resource/earlyaccess/palworld/header.jpg');
+
+CREATE TABLE product (
+    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    category_id INT,
+    product_name VARCHAR(255) NOT NULL,
+    product_description TEXT,
+    product_images_header VARCHAR(255),
+    product_images_portrait VARCHAR(255),
+    product_price_promotion DECIMAL(10,2),
+    product_sale_count INT,
+    FOREIGN KEY (category_id) REFERENCES category(category_id)
+);
+
+INSERT INTO product (category_id, product_name, product_description, product_images_header, product_images_portrait, product_price_promotion, product_sale_count)
+VALUES
+    (1, 'Guild Wars 2', 'MMORPG, Adventure, RPG, Character Customization', 'resource/freetoplay/guild-war/header.jpg', 'resource/freetoplay/guild-war/portrait.png', NULL, 0),
+    (1, 'The Sims 4', 'Life Sim, Character Customization, Building', 'resource/freetoplay/the-sims-4/header.jpeg', 'resource/freetoplay/the-sims-4/portrait.jpg', NULL, 0),
+    (1, 'Warframe', 'Free to Play, Action RPG, Looter Shooter, Third-Person Shooter, Action, RPG', 'resource/freetoplay/warframe/header.jpg', 'resource/freetoplay/warframe/portrait.png', NULL, 0),
+    (1, 'Call of Duty: Warzone', 'Free to Play, Multiplayer, FPS, Battle Royale, Action, Shooter', 'resource/freetoplay/call-of-duty/header.jpg', 'resource/freetoplay/call-of-duty/portrait.jpg', NULL, 0),
+    (1, 'PUBG: BATTLEGROUNDS', 'Survival, Shooter, Battle Royale, Multiplayer, FPS, PvP, Third-Person Shooter, Action', 'resource/freetoplay/pubg/header.jpg', 'resource/freetoplay/pubg/portrait.png', NULL, 0),
+    (1, 'LoveBeat', 'Free to Play, Rhythm, Massively Multiplayer, Casual, Music, Anime', 'resource/freetoplay/loveBeat/header.jpg', 'resource/freetoplay/loveBeat/portrait.jpg', NULL, 0),
+    (1, 'Team Fortress 2', 'Free to Play, Hero Shooter, Multiplayer, FPS, Shooter, Action, Class-Based', 'resource/freetoplay/team-fortress/header.jpg', 'resource/freetoplay/team-fortress/portrait.jpg', NULL, 0),
+    (1, 'eFootball 2024', 'Football(Soccer), Free to Play, Sports, Multiplayer, Controller, eSports, Simulation, PvP', 'resource/freetoplay/eFootball/header.jpg', 'resource/freetoplay/eFootball/portrait.jpg', NULL, 0),
+    (1, 'Destiny 2', 'Free to Play, Open World, FPS, Looter Shooter, MMORPG, Co-op, Multiplayer, PvE', 'resource/freetoplay/destiny/header.jpeg', 'resource/freetoplay/destiny/portrait.jpg', NULL, 0),
+    (1, 'War Thunder', 'Free to Play, Vehicular Combat, Combat, World War II, VR, Flight, War, Military, Tanks', 'resource/freetoplay/war-thunder/header.jpg', 'resource/freetoplay/war-thunder/portrait.jpg', NULL, 0),
+    (1, 'THE FINALS', 'Multiplayer, Shooter, FPS, Free to Play, Destruction, PvP, First-Person, Team-Based', 'resource/freetoplay/the-finals/header.jpg', 'resource/freetoplay/the-finals/portrait.jpg', NULL, 0),
+    (1, 'Counter-Strike 2', 'FPS, Shooter, Multiplayer, Competitive, Action, Team-Based, eSports', 'resource/freetoplay/counter-strike/header.jpg', 'resource/freetoplay/counter-strike/portrait.jpg', NULL, 0),
+    (2, 'Granblue Fantasy Versus: Rising Free Edition', 'Action, 2D Fighter, Anime, Fighting, eSports, Single player', 'resource/demos/granblue-fantasy-versus/header.jpg', 'resource/demos/granblue-fantasy-versus/portrait.jpg', NULL, 0),
+    (2, 'Feed The Cups Demo', 'Cute, Simulation, Crafting, 2D, Online Co-op', 'resource/demos/feed-the-cups/header.jpg', 'resource/demos/feed-the-cups/portrait.jpg', NULL, 0),
+    (2, 'FINAL FANTASY XIV Online Free Trial', 'RPG, Massively Multiplayer, MMORPG, Fantasy, Open World, Adventure', 'resource/demos/final-fantasy/header.jpg', 'resource/demos/final-fantasy/portrait.jpg', NULL, 0),
+    (2, 'DELTARUNE Demo', 'Story Rich, Pixel Graphics, Great Soundtrack, Funny, RPG, Bullet Hell, Singleplayer, Emotional', 'resource/demos/deltarune/header.jpg', 'resource/demos/deltarune/portrait.jpeg', NULL, 0),
+    (2, 'Demonsomania Demo', 'Horror, Online Co-Op, Multiplayer, Psychological Horror, Co-Op, Exploration, Supernatural, Sci-fi', 'resource/demos/demonsomnia/header.jpg', 'resource/demos/demonsomnia/portrait.jpg', NULL, 0),
+    (2, 'Internet Cafe Evolution Demo', 'Simulation, Management, Strategy, Building, Indie, Dating Sim, Economy, Sandbox', 'resource/demos/internet-cafe/header.jpg', 'resource/demos/internet-cafe/portrait.jpg', NULL, 0),
+    (2, 'Sky: Children of the Light Demo', 'MMORPG, Puzzle, Indie, Cozy, Adventure, Relaxing, Massively Multiplayer, Exploration, Emotional', 'resource/demos/sky-children-of-the-light/header.png', 'resource/demos/sky-children-of-the-light/portrait.jpg', NULL, 0),
+    (2, 'Soundpad Demo', 'Utilities, Audio Production', 'resource/demos/soundpad/header.jpg', 'resource/demos/soundpad/portrait.png', NULL, 0),
+    (2, 'Epic Auto Towers Demo', 'Strategy, Auto Battler, Combat, Cute, Roguelike Deckbuilder, Card Battler', 'resource/demos/epic-auto-towers/header.jpg', 'resource/demos/epic-auto-towers/portrait.jpg', NULL, 0),
+    (2, 'Dread Dawn Demo', 'Gore, Violent', 'resource/demos/dread-dawn-demo/header.jpg', 'resource/demos/dread-dawn-demo/portrait.jpg', NULL, 0),
+    (2, 'Euro Truck Simulator 2 Demo', 'Simulation', 'resource/demos/euro-truck-simulator/header.jpg', 'resource/demos/euro-truck-simulator/portrait.jpg', NULL, 0),
+    (2, 'Backpack Battles Demo', 'Strategy Auto Battler, Inventory Management, PvP, Roguelike Deckbuilder', 'resource/demos/backpack-battles/header.jpg', 'resource/demos/backpack-battles/protrait.jpg', NULL, 0),
+    (3, 'Valheim', 'Open World Survival Craft, Survival, Online Co-Op, Open World, Multiplayer, Building, Crafting, Exploration', 'resource/earlyaccess/valheim/header.jpg', 'resource/earlyaccess/valheim/portrait.jpg', 289.00, 0),
+    (3, 'Lethal Company', 'Online Co-Op, Horror, First-Person, Co-Op, Psychological Horror, Survival Horror', 'resource/earlyaccess/lethal-company/header.jpg', 'resource/earlyaccess/lethal-company/portrait.jpg', 220.00, 0),
+    (3, 'Zero Hour', 'Tactical, Shooter, FPS, Realistic, Multiplayer, Action, First-Person', 'resource/earlyaccess/zero-hour/header.jpg', 'resource/earlyaccess/zero-hour/portrait.jpeg', 125.40, 0),
+    (3, 'Fabledom', 'City Builder, Relaxing, Sandbox, Colony Sim, Economy', 'resource/earlyaccess/fabledom/header.jpg', 'resource/earlyaccess/fabledom/portrait.jpeg', 298.15, 0),
+    (3, '7 Days to Die', 'Survival, Zombies, Multiplayer, Open World, Open World Survival Craft, Voxel, Base Building', 'resource/earlyaccess/7-days-to-die/header.jpg', 'resource/earlyaccess/7-days-to-die/portrait.jpg', 319.00, 0),
+    (3, 'BeamNG.drive', 'Simulation, Driving, Realistic, Physics, Destruction, Automobile Sim, Open World', 'resource/earlyaccess/beamNG/header.jpg', 'resource/earlyaccess/beamNG/portrait.png', 319.00, 0),
+    (3, 'Enshrouded', 'Open World, Survival, Base Building, Multiplayer, Online Co-Op, Crafting', 'resource/earlyaccess/enshrouded/header.jpg', 'resource/earlyaccess/enshrouded/portrait.jpg', 539.00, 0),
+    (3, 'HumanitZ', 'Survival, Zombies Open World, Multiplayer, Crafting, Base Building', 'resource/earlyaccess/humanitZ/header.jpg', 'resource/earlyaccess/humanitZ/portrait.jpeg', 280.00, 0),
+    (3, 'ULTRAKILL', 'Boomer Shooter, Character Action Game, Fast-Paced, Blood', 'resource/earlyaccess/ultrakill/header.jpg', 'resource/earlyaccess/ultrakill/portrait.png', 346.50, 0),
+    (3, 'Deep Rock Galactic: Survivor', 'Dwarf, Action Roguelike, Top-Down Shooter, Bullet Hell', 'resource/earlyaccess/deep-rock-galactic-survivor/header.jpg', 'resource/earlyaccess/deep-rock-galactic-survivor/portrait.jpg', 220.00, 0),
+    (3, 'Palworld', 'Multiplayer, Open World, Creature Collector, Survival, Open World Survival Craft', 'resource/earlyaccess/palworld/header.jpg', 'resource/earlyaccess/palworld/portrait.jpg', 590.00, 0),
+    (3, 'Project Zomboid', 'Survival, Zombies, Open World Multiplayer', 'resource/earlyaccess/project-zomboid/header.jpg', 'resource/earlyaccess/project-zomboid/portrait.jpg', 400.00, 0);
+
+
+CREATE TABLE IF NOT EXISTS users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL, -- Storing hashed passwords for security
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(username)
+);
+
+CREATE TABLE IF NOT EXISTS sessions (
+    session_id VARCHAR(100) PRIMARY KEY,
+    user_id INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+INSERT INTO users (username, password) VALUES 
+('admin@example.com', 'bood'),
+('migeleiei@example.com', 'kkdontbengo');
+
+INSERT INTO sessions (session_id, user_id) VALUES 
+('session123', 1);
+
+CREATE TABLE IF NOT EXISTS sales (
+    bill_id INT AUTO_INCREMENT PRIMARY KEY,
+    bill_date DATE,
+    product_id INT,
+    number_of_items INT,
+    bill_price DECIMAL(10, 2),
+    FOREIGN KEY (product_id) REFERENCES products(product_id)
+);

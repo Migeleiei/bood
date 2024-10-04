@@ -1,0 +1,31 @@
+version: '3.8'
+ 
+networks:
+  bood:
+    driver: bridge
+ 
+services:
+  frontend:
+    container_name: bood-frontend
+    image: mrsmirror/bood-prod:latest
+    networks:
+      - bood
+    ports:
+      - "80:3000"
+    environment:
+      - DB_NAME=${DB_NAME}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=${DB_HOST}
+  db:
+    container_name: bood-db
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    networks:
+      - bood
+    environment:
+      - "MYSQL_DATABASE=${DB_NAME}"
+      - "MYSQL_ROOT_PASSWORD=${DB_PASSWORD}"
+    volumes:
+      - ./mysql:/var/lib/mysql

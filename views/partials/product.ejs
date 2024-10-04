@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <style>
+        .contnum1{
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contnum2{
+            width: 90%;
+            margin-top: 5%;
+            height: auto;
+            max-height: 70%;
+        }
+        .contnum3{
+            height:500px;
+            background-color: rgba(217, 217, 217, 0.25);
+            border-radius: 15px;
+        }
+        .contnum4{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .header-content{
+            width: 100%;
+            height: 10%;  
+            color: white;  
+            
+            padding: 20px;
+        }
+        .header-content h5{
+            align-items: center;
+            padding-left: 34%;
+        }
+        .main-content{
+            height: 90%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        .first-content{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .first-content img{
+            width: auto;
+            height: auto;
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 15px;
+        }
+        .second-content{
+            width: 70%;
+            height: 100%;
+            padding: 2%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .price-footer{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+        .img-container{
+            width: 100%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .price-box{
+            width: 90%;
+            height: 80%;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: end;
+            padding-right: 10%;
+            font-weight: 500;
+            border-radius: 5px;
+        }
+        .second-inner{
+            color: white;
+            font-weight: 500;
+        }
+        .second-box{
+            width: 95%;
+            height: 95%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #31304D;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('../partials/navbar') %>
+    <div class="contnum1">
+        <div class="contnum2">
+            <div class="contnum3">
+                <div class="contnum4">
+                    <div class="header-content">
+                        <h5>Game Name</h5>
+                        <div class="">
+                        </div>
+                    </div>
+                    <div class="main-content">
+                        <div class="first-content">
+                            <div class="img-container">
+                                <img src="/Gamepicture/protrait.jpg" alt="">
+                            </div>
+                            <div class="price-footer">
+                                <div class="price-box">
+                                    price-footer
+                                </div>
+                            </div>
+                        </div>
+                        <div class="second-content">
+                            <div class="second-box">
+                                <div class="second-inner">
+                                    <p>Game describtion</p>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

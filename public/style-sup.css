@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+}
+.sup-topic{
+    border-radius: 5px;
+    background-color: rgba(22, 26, 48, 0.7);
+    height: 100px;
+    width: 1700px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+}

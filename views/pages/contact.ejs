@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpRcyYhmpSLy4j-YqyCKcW92i4Pco-b3w&callback=console.debug&libraries=maps,marker&v=beta"></script>
+    <style>
+        
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .apimap{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            padding: 5%;
+        }
+        .apicontent{
+            width: 80%;
+            height: 60%;
+            padding: 3%;
+            border-radius: 20px;
+            background-color: rgba(217, 217, 217, 0.25);
+        }
+        .map{
+            height: 50vh;
+            width: auto;
+            
+        }
+        .apicontent h3{
+            justify-content: center;
+            display: flex;
+            margin-top: 5%;
+            font-size: 100%;
+            color: white;
+        }
+    
+    </style>
+       
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+    <div class="">
+        <div class="apimap">
+            <div class="apicontent">
+                <div class="map" >
+                    <gmp-map center="18.80064582824707,98.95037078857422" zoom="14" map-id="DEMO_MAP_ID">
+                    <gmp-advanced-marker position="18.80064582824707,98.95037078857422" title="My location"></gmp-advanced-marker>
+                    </gmp-map>
+                </div>
+                <h3>College of Art Media and Technology, Chiang Mai University, tel: +66923163272 </h3>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

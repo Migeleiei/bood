@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <style>
+        
+
+        .sup-topic{
+            border-radius: 10px ;
+            background-color: rgba(22, 26, 48, 0.7);
+            height: 200px;
+            max-height: 10vh;
+            width: 90%;
+            display: flex;
+            margin-bottom: 5vh;
+            align-items: center;
+            padding-left: 2vw;
+            border: none;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .sup-topic h4{
+            color: white;
+        }
+        
+        .sup-header{
+            color: white;
+            margin-top: 5vh;
+            justify-content: space-between;
+            width: 100%; /* Ensures full width for header */
+        }
+        .sup-header p{
+            color: #5999CC;
+            
+        }
+        
+        
+        .top-content{
+            margin-top:4vh;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    </style>
+<body>
+    <%- include('../partials/navbar') %>
+    <div class="container-fluid">
+        <div class="top-content">
+            <div class="row sup-header">
+                <div class="col-6">
+                    <h1>Support</h1>
+                    <p><i>what do you need help with?</i></p>
+                </div>
+                <div class="col-6 search-bar">
+                </div>
+            </div>
+        </div>
+        
+        <div >
+            <button class="sup-topic"><h4 type="topic-header">Game, Software, etc.,</h4></button>
+            
+        </div>
+        <div >
+            <button class="sup-topic"><h4 type="topic-header">Purches</h4></button>
+            
+        </div>
+        <div >
+            <button class="sup-topic"><h4 type="topic-header">My Account</h4></button>
+            
+        </div>
+        <div >
+            <button class="sup-topic"><h4 type="topic-header">Client</h4></button>
+            
+        </div>
+        <div >
+            <button class="sup-topic"><h4 type="topic-header">Community</h4></button>
+            
+        </div>
+    </div>
+
+
+
+</body>
+</html>

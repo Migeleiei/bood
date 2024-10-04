@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    
+    <style>
+        .container-fluid{
+            margin: 0;
+            padding: 0;
+            width: 90%;
+        }
+        .topic-header{
+            color: white;
+            margin-left: 10%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        .main-content{
+            width: 40%;
+            height: 60%;
+            padding: 3%;
+            border-radius: 3%;
+            background-color: rgba(217, 217, 217, 0.25);
+        }
+        .main-content h5,
+        .main-content p{
+            color: white;
+        }
+        .main-content h5{
+            margin-top: 2%;
+        }
+        .main-content img{
+            width: 100%;
+            height: 100%;
+            border-radius: 2%;
+        }
+        .top-content{
+            display: flex;
+            justify-content: center;
+            gap: 1vw ;
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+        }   
+       
+        .b-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .m-b-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .sub-content {
+            width: 82%;
+            height: 40%;
+            padding: 1%;
+            margin-bottom: 1%;
+            border-radius: 20px;
+            background-color: rgba(217, 217, 217, 0.25);
+        }
+        .sub-content img{
+            width: 20%;
+            height: 20%;
+            border-radius: 20px;
+        }
+        .sub-inner{
+            display: flex;
+        }
+        .sub-info{
+            margin-top: 1%;
+            margin-left: 2%;
+            color: white;
+        }
+        @media only screen and (max-width: 768px) {
+            /* Hide the second .main-content div on mobile */
+            .main-content{
+                width: 40%;
+                height: 20%;
+            }
+            .b-content{
+                display: none;
+            }
+            
+        }
+        @media only screen and (min-width: 768px) {
+            /* Hide the second .main-content div on mobile */
+            .main-content{
+                width: 40%;
+                height: 20%;
+            }
+            .m-b-content{
+                display: none;
+            }
+            .c-b-content{
+                display: none;
+            }
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+    <!-- <div class="container mw-100 ">
+        <div class="row">
+            <h1 class="offset-1 my-4">Hi</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-5 w-20 h-20 main-content">
+                    <img src="/Gamepicture/Dota.png">
+                    <h1>Hi</h1>
+            </div>
+            <div class="col-5 ms-2 w-20 mh-90  main-content">
+                <img src="/Gamepicture/Dota.png">
+                <h1 class="mt-1">Hi</h1>
+            </div>
+
+        </div>
+    </div> -->
+    <div class="container-fluid">
+        <div class="topic-header">
+            <h2>News Game</h2>
+        </div>
+        <div class="top-content">
+            <div class="main-content">
+                <img src="/Gamepicture/Dota.png">
+                <h5>Hi</h5>
+                <p>topic</p>
+            </div>
+            <div class="main-content">
+                <img src="/Gamepicture/Dota.png">
+                <h5>Hi</h5>
+                <p>topic</p>
+            </div>
+        </div>
+        <div class="b-content">
+            <div class="sub-content">
+                <div class="sub-inner">
+                    <img src="/Gamepicture/Dota.png">
+                    <div class="sub-info">
+                        <h5>Hi</h5>
+                        <p>topic</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-content">
+                <div class="sub-inner">
+                    <img src="/Gamepicture/Dota.png">
+                    <div class="sub-info">
+                        <h5>Hi</h5>
+                        <p>topic</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="m-b-content">
+            <div class="top-content">
+                <div class="main-content">
+                    <img src="/Gamepicture/Dota.png">
+                    <h5>Hi</h5>
+                    <p>topic</p>
+                </div>
+                <div class="main-content">
+                    <img src="/Gamepicture/Dota.png">
+                    <h5>Hi</h5>
+                    <p>topic</p>
+                </div>
+                </div>
+        </div>
+        <div class="c-b-content">
+            <div class="top-content">
+                <div class="main-content">
+                    <img src="/Gamepicture/Dota.png">
+                    <h5>Hi</h5>
+                    <p>topic</p>
+                </div>
+                <div class="main-content">
+                    <img src="/Gamepicture/Dota.png">
+                    <h5>Hi</h5>
+                    <p>topic</p>
+                </div>
+                </div>
+        </div>
+        </div>
+        
+        
+        
+    </div>
+</body>
+</html>

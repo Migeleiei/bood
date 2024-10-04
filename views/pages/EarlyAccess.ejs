@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Access</title>
+    <style>
+        .topic-header{
+            color: white;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            
+        }
+        .container-fluid1{
+            display: flex;
+            flex-wrap: wrap; /* Allow elements to wrap to the next line */
+            justify-content: center; /* Start filling from the left */
+            gap: 1vw;
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+        }
+        .footer-of-product{
+            border-radius: 5px;
+            color: white;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .footer-of-product p{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            margin: 0;
+            margin-right: 5%;
+        }
+        .footer-container{
+            display: flex;
+            flex-direction: column-reverse;
+            height: 10%;
+        }
+        .top-inner-content{
+            width: 100%;
+          
+        }
+        .game-info{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 30%;
+           
+        }
+        .game-info h5,
+        .game-info p{
+            /* Allow the text to shrink when needed */
+            overflow: hidden; /* Hide overflow text if it exceeds container */
+            text-overflow: ellipsis; /* Add ellipsis for readability */
+           
+        }
+        .main-content{
+            width: 30%;
+           
+            padding: 1%;
+            border-radius: 10px;
+            background-color: rgba(217, 217, 217, 0.25);
+             /* Add margin to create space between rows */
+        }
+        .top-inner-content img{
+            width: 100%;
+            height: auto; /* Ensure aspect ratio is maintained */
+            border-radius: 10px;
+        }
+        .main-inner-content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        @media only screen and (max-width: 768px) {
+            .container-fluid1{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .main-content{
+                /* flex: 0 0 calc(50% - 2vw); 50% width on smaller screens */
+                width: 40%;
+                height: 10%;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+</body>
+</html>
